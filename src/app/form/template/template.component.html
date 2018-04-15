@@ -1,0 +1,25 @@
+<!-- 模板型表单：方式1用法 -->
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>用户名：<input type="text" ngModel name="username"></div>
+  <div>手机号：<input type="number"  ngModel name="mobile"></div>
+  <div ngModelGroup="passwordsGroup">
+    <div>密码：<input type="password"  ngModel name="password"></div>
+    <div>确认密码：<input type="password"  ngModel name="pwdConfirm"></div>
+  </div>
+  <button type="submit">注册</button>
+</form>
+
+<!-- 模板型表单：方式2用法 -->
+<form #myForm1="ngForm" (ngSubmit)="onSubmit(myForm.value)">
+  <div>用户名：<input type="text" [(ngModel)]="myHero.name" name="username"></div>
+  <div>手机号：<input type="number"  [(ngModel)]="myHero.mobile" name="mobile"></div>
+  <div ngModelGroup="passwordsGroup">
+    <div>密码：<input type="password"  [(ngModel)]="myHero.password" name="password"></div>
+    <div>确认密码：<input type="password"  ngModel name="pwdConfirm"></div>
+  </div>
+  <button type="submit">注册</button>
+</form>
+
+<div>
+  {{myForm1.value | json}}
+</div>

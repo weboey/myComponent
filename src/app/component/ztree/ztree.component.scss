@@ -1,0 +1,44 @@
+.red{
+  color: #ff6700;
+}
+
+.ztree-container{
+  display: flex;
+  .ztree{
+    width: 300px;
+  }
+  .ztree-detail-box{
+    flex: 1;
+  }
+}
+
+.form-item{
+  margin-bottom: 20px;
+}
+input{
+  outline: none;
+  position: relative;
+  display: inline-block;
+  padding: 4px 7px;
+  width: 80%;
+  height: 28px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(0,0,0,.65);
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+input:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(16,142,233,.2);
+  box-shadow: 0 0 0 2px rgba(16,142,233,.2);
+}
+input:focus, .ant-input:hover {
+  border-color: #49a9ee;
+}
