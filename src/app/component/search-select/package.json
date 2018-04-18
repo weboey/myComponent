@@ -1,14 +1,14 @@
 {
-  "name": "sxzq-search-select-component",
+  "name": "search-select-component",
   "version": "1.0.6",
-  "description": "下拉选择器",
+  "description": "select",
   "main": "index.ts",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "npm:publish" :"npm publish --registry http://192.168.1.232:4873"
-  }, 
-  "author": "chenyunsheng",
+    "npm:publish" :"npm publish"
+  },
+  "author": "weboey",
   "license": "ISC"
 }
