@@ -1,0 +1,7 @@
+<div class="btn-group fillterBtnBox">
+  <label class="label-title">{{checkModel.checkTitle}}</label>
+  <button class="AllSelectBtn selectItemButton">全选</button>
+  <button class="selectItemButton" *ngFor="let item of checkModel.checkNames;let i = index">{{item.checkName}}</button>
+</div>
+<h1>{{dataOfObj|json}}</h1>
+<h1>{{dataOfStr}}</h1>

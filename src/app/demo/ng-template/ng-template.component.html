@@ -1,0 +1,21 @@
+<ng-container *ngTemplateOutlet="greet"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="eng; context: myContext"></ng-container>
+<hr>
+<ng-container *ngTemplateOutlet="svk; context: myContext"></ng-container>
+<hr>
+
+<ng-template #greet><span>Hello</span></ng-template>
+<ng-template #eng let-item="test"><span>Hello {{item.age}}!</span></ng-template>
+<ng-template #svk let-person="localSk"><span>Ahoj {{person}}!</span></ng-template>
+
+
+<div *ngFor="let person of allPersons">
+  <ng-container *ngTemplateOutlet="for; context: person"></ng-container>
+</div>
+
+<ng-template ngFor let-person [ngForOf]= "allPersons" let-i="index">
+  <h1>this is test</h1>
+  {{person}}
+  <p>{{person.name}} : {{person.age}} </p>
+</ng-template>

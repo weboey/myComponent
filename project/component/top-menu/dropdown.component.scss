@@ -1,0 +1,95 @@
+// 导入主题样式文件
+@import "../theme";
+
+
+.headerNav .headerNav-body{
+  display: flex;
+}
+
+/*头部菜单样式*/
+.header-menu{
+  font-size: 14px;
+  line-height: 42px;
+  width: 60%;
+  & > nz-dropdown{
+    margin-right: 4%;
+  }
+}
+
+/*头部标题样式*/
+.header-title{
+  width: 20%;
+}
+.header-title .project-title{
+  color: $projectTitleColor;
+  font-size: 18px;
+  letter-spacing: 0px;
+  line-height: 46px;
+  cursor: pointer;
+}
+
+.menu-font-style{
+  font-size: 14px;
+  color: $headerColor;
+}
+.menu-child-body{
+  background-color: $menuColor;
+  min-width: 100px;
+}
+.menu-child-style{
+  font-size: 14px;
+  color: $headerColor;
+  text-align: left;
+  span{
+    font-size: 14px;
+    color: $headerColor;
+    text-align: left;
+    &:hover{
+      background-color:$menuColorHover !important;
+    }
+  }
+}
+
+.menu-child-style:hover{
+  background-color:$menuColorHover !important;
+}
+/*头部用户信息*/
+.header-user{
+  display: flex;
+  width: 20%;
+  justify-content: flex-end;
+}
+.header-user>li{
+  list-style-type:none;
+  margin-right: 3%;
+}
+.home-icon-style{
+  font-size: 25px;
+  height: 26px;
+  width: 25px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.mail-icon-style{
+  font-size: 25px;
+  height: 26px;
+  width: 25px;
+  margin-top: 11.5px;
+  cursor: pointer;
+}
+.mail-icon-style:hover{
+  background-color: $menuColorHover;
+}
+.home-icon-style:hover{
+  background-color: $menuColorHover;
+}
+.tip-message-red{
+  position: relative;
+  left: 18px;
+  top: -26px;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  background-color: #f30b0b;
+}
+

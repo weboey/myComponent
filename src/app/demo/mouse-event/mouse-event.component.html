@@ -1,0 +1,21 @@
+<div class="wrap">
+  wrap, mouseenter
+  <ul class="mouseenter list" (mouseup)="mouseupHandler()"
+      (mouseenter)="mouserEnterHandler()" (mouseout)="mouseOutHandler()">
+    count: <span class="count">{{mouseenterCount}}</span>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div>
+
+<div class="wrap">
+  wrap, emulate mouseenter,用mouseover模拟实现mouseenter
+  <ul class="emulate-mouseenter list" (mouseup)="mouseupHandler()"
+      (mouseover)="mouserOverHandler()" (mouseleave)="mouserLeaveHandler()">
+    count: <span class="count">{{mouseoverCount}}</span>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div>

@@ -1,0 +1,98 @@
+/*头部用户信息*/
+$headerColor:#ffe6bb;
+$headerHoverColor:#ff900d;
+$menuLineColor:#546057;
+
+.header-user{
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  .item{
+    margin-right: 15px;
+    color: $headerColor;
+    font-size: 14px;
+    .user-head{
+      border-radius: 50%;
+      height: 32px;
+      width: 32px;
+      vertical-align: middle;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .f-line{
+    position: relative;
+    width: 46px;
+    &:after{
+      content: "";
+      right: 4px;
+      top: -10px;
+      position: absolute;
+      width: 1px;
+      height: 42px;
+      background-color: $menuLineColor;
+    }
+  }
+  .icon-style{
+    display: inline-block;
+    height: 20px;
+    width: 26px;
+    cursor: pointer;
+    background: url("../../img/tongzhi.png");
+    vertical-align: bottom;
+    &:hover{
+      background: url("../../img/tongzhi_hover.png");
+    }
+  }
+  .tip-message-red:after{
+    content: '';
+    display: block;
+    position: relative;
+    left: 18px;
+    top: 0;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    background-color: #f30b0b;
+  }
+}
+.menu-child-body{
+  .user-img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  .img-grzl{
+    background: url("../../img/user-grzl.png");
+  }
+  .img-xgmm{
+    background: url("../../img/user-xgmm.png");
+  }
+  .img-sypz{
+    background: url("../../img/user-sypz.png");
+  }
+  .img-tcxt{
+    background: url("../../img/user-tcxt.png");
+  }
+}
+.header-user{
+  nz-dropdown{
+    height: 100%;
+  }
+  .ant-dropdown-link{
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    .anticon-down{
+      transition: transform 0.2s ease;
+    }
+    &:hover .anticon-down{
+      transform: rotate(180deg);
+    }
+  }
+}
+

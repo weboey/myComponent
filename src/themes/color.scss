@@ -1,0 +1,50 @@
+
+//  Red
+//  ───────────────────────────────────
+$oc-red-list: (
+  "0": #fff5f5,
+  "1": #ffe3e3,
+  "2": #ffc9c9,
+  "3": #ffa8a8,
+  "4": #ff8787,
+  "5": #ff6b6b,
+  "6": #fa5252,
+  "7": #f03e3e,
+  "8": #e03131,
+  "9": #c92a2a
+);
+$oc-red-0: map-get($oc-red-list, "0");
+$oc-red-1: map-get($oc-red-list, "1");
+$oc-red-2: map-get($oc-red-list, "2");
+$oc-red-3: map-get($oc-red-list, "3");
+$oc-red-4: map-get($oc-red-list, "4");
+$oc-red-5: map-get($oc-red-list, "5");
+$oc-red-6: map-get($oc-red-list, "6");
+$oc-red-7: map-get($oc-red-list, "7");
+$oc-red-8: map-get($oc-red-list, "8");
+$oc-red-9: map-get($oc-red-list, "9");
+
+//  Pink
+//  ───────────────────────────────────
+$oc-pink-list: (
+  "0": #fff0f6,
+  "1": #ffdeeb,
+  "2": #fcc2d7,
+  "3": #faa2c1,
+  "4": #f783ac,
+  "5": #f06595,
+  "6": #e64980,
+  "7": #d6336c,
+  "8": #c2255c,
+  "9": #a61e4d
+);
+$oc-pink-0: map-get($oc-pink-list, "0");
+$oc-pink-1: map-get($oc-pink-list, "1");
+$oc-pink-2: map-get($oc-pink-list, "2");
+$oc-pink-3: map-get($oc-pink-list, "3");
+$oc-pink-4: map-get($oc-pink-list, "4");
+$oc-pink-5: map-get($oc-pink-list, "5");
+$oc-pink-6: map-get($oc-pink-list, "6");
+$oc-pink-7: map-get($oc-pink-list, "7");
+$oc-pink-8: map-get($oc-pink-list, "8");
+$oc-pink-9: map-get($oc-pink-list, "9");

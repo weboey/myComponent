@@ -1,0 +1,71 @@
+<table>
+  <colgroup>
+    <col *ngFor="let head of _$headerSettings;" width="{{head.width}}">
+  </colgroup>
+  <thead>
+    <tr>
+      <th *ngFor="let head of _$headerSettings; index as i" class="{{head.class}}">
+        {{head.cellData}}
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr #tableRow *ngFor="let row of _$cellSettings; index as rowIndex">
+      <td *ngFor="let cell of row;" class="{{cell.class}}">
+        <div class="jigsaw-table-cell-content">
+          <span class="jigsaw-table-cell-text" title="{{cell.tooltip ? cell.tooltip : ''}}">{{cell.cellData}}</span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<nz-table #nzTable [nzDataSource]="_$cellSettings" [nzPageSize]="10" [nzShowTotal]="true">
+  <colgroup>
+    <col *ngFor="let head of _$headerSettings;" width="{{head.width}}">
+  </colgroup>
+  <thead nz-thead>
+    <tr>
+      <th nz-th *ngFor="let head of _$headerSettings; index as i" class="{{head.class}}">
+        {{head.cellData}}
+      </th>
+    </tr>
+  </thead>
+
+  <tbody nz-tbody>
+  <tr nz-tbody-tr #tableRow *ngFor="let row of nzTable.data; index as rowIndex">
+<!--    <td>
+      <span class="jigsaw-table-cell-text">{{row | json}}</span>
+    </td>-->
+
+    <td nz-td *ngFor="let cell of row;" class="{{cell.class}}"
+        [attr.colspan]="cell.colSpan > 1 ? cell.colSpan : null"
+        [style.display]="cell.colSpan ? 'table-cell' : 'none'">
+      <ng-container *ngIf="cell.colSpan <= 1; else childTableTpl">
+        <ng-container *ngIf="!cell.renderer; else rendererCellTpl">
+          <div class="jigsaw-table-cell-content">
+            <span class="jigsaw-table-cell-text">{{cell.cellData}} 99</span>
+          </div>
+        </ng-container>
+        <ng-template #rendererCellTpl>
+          <sxzq-table-cell
+            [tableData]="data"
+            [(cellData)]="cell.cellData"
+            [row]="rowIndex"
+            [field]="cell.field"
+            [renderer]="cell.renderer"
+            [group]="cell.group"
+            [colSpan]="cell.colSpan"
+          ></sxzq-table-cell>
+        </ng-template>
+      </ng-container>
+      <ng-template #childTableTpl>
+        <sxzq-child-table [data]="cell.cellData"></sxzq-child-table>
+      </ng-template>
+    </td>
+  </tr>
+  </tbody>
+</nz-table>

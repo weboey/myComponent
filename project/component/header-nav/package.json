@@ -1,0 +1,14 @@
+{
+  "name": "sxzq-header-nav-component",
+  "version": "1.1.28",
+  "description": "头部公用导航组件",
+  "main": "index.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "npm:publish" :"npm publish --registry http://192.168.1.232:4873"
+  },
+  "author": "chenyunsheng",
+  "license": "ISC"
+}

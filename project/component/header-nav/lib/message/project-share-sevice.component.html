@@ -1,0 +1,36 @@
+<div  *ngFor="let message of messageList;let i= index">
+  <div   [ngClass]="{'message-show1':message.showTip&&i==0,
+                             'message-show2':message.showTip&&i==1,
+                             'message-show3':message.showTip&&i==2,
+                             'message-show4':message.showTip&&i==3,
+                             'message-show5':message.showTip&&i==4,
+                             'message-hidden':!message.showTip}" [ngStyle]="messageCss[i]">
+    <ul class="message-show-header">
+      <div class="fl">消息提示</div>
+      <div class="fr cursor-p" (click)="closeTip(i)">X</div>
+    </ul>
+    <ul class="message-detail">
+      <div class="fl w20-per-cent" style="font-weight: bold" [ngClass]="{'color-participate':message.content.type=='发标',
+                                                                     'color-sponsor':message.message_type_name=='通知',
+                                                                  'color-delete-bid':message.content.type=='删除',
+                                                                  'color-bule':message.content.type=='中标'
+                                                                  }">
+        <span>[</span>
+        <span [innerHtml]="message.content.type ? message.content.type : message.message_type_name">发标</span>
+        <span>]</span>
+      </div>
+      <div  class="fl w30-per-cent suspension">
+        <span [innerHtml]="message.title" [title]="message.title">17华润置地MTN001B</span>
+      </div>
+      <div  class="fl w20-per-cent suspension" *ngIf="message.content.type=='发标'">
+        <span [innerHtml]="message.content.participate_user_name" [title]="message.content.participate_user_name"> </span>
+      </div>
+      <div  class="fl w25-per-cent suspension">
+        <span [innerHtml]="message.message_type">发标</span>
+      </div>
+    </ul>
+    <ul>
+      <div class="fr view-message-button" (click)="closeTip(i);hrefNavigate('/bidding/MessageManage')" >查看消息</div>
+    </ul>
+  </div>
+</div>

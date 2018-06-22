@@ -1,0 +1,17 @@
+<div class="header-user">
+  <ng-container> <!-- *ngIf="!currentUser" -->
+    <a class="item f-line"><i class="icon-style" [ngClass]="{'tip-message-red':hasMsg}" (click)="hrefNavigate('/bidding/MessageManage')"></i></a>
+    <nz-dropdown class="item">
+      <a class="ant-dropdown-link"  nz-dropdown>
+        <span class="item" style="margin-right: 5px"><img class="user-head" [src]="currentUser['image_url']" (error)="currentUser['image_url'] ='/assets/images/user_img.png'" alt=""></span>
+        <span class="menu-font-style">{{currentUser['name']}}</span><i class="anticon anticon-down" style="margin-left: 6px;font-size: 12px;"></i>
+      </a>
+      <ul nz-menu class="menu-child-body">
+        <li nz-menu-item class="menu-child-style" (click)="hrefNavigate('/bidding/UserInformation')"><i class="user-img img-grzl"></i>个人资料</li>
+        <li nz-menu-item class="menu-child-style" (click)="hrefNavigate('/bidding/ChangePassword')"><i class="user-img img-xgmm"></i>修改密码</li>
+        <li nz-menu-item class="menu-child-style" (click)="hrefNavigate('/homeConfig')"><i class="user-img img-sypz"></i>首页配置</li>
+        <li nz-menu-item class="menu-child-style" (click)="loginOut()"><i class="user-img img-tcxt"></i>退出系统</li>
+      </ul>
+    </nz-dropdown>
+  </ng-container>
+</div>

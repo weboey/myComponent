@@ -1,0 +1,15 @@
+<table class="child-colSpan-table">
+  <!--<colgroup>-->
+    <!--<col *ngFor="let head of _$headerSettings;" width="{{head.width}}">-->
+  <!--</colgroup>-->
+
+  <tbody>
+    <tr #tableRow *ngFor="let row of _$cellSettings; index as rowIndex">
+      <td *ngFor="let cell of row;" class="{{cell.class}}">
+        <div class="jigsaw-table-cell-content">
+          <span class="jigsaw-table-cell-text">{{cell.cellData}}</span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

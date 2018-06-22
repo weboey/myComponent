@@ -1,0 +1,116 @@
+/*消息提示*/
+.message-show1{
+  position: fixed;
+  /*top: 848px;*/
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);;
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-show2{
+  position: fixed;
+  /*  top:738px;*/
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-show3{
+  position: fixed;
+  /* top:628px;*/
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-show4{
+  position: fixed;
+  /*  top:518px;*/
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-show5{
+  position: fixed;
+  /*  top:408px;*/
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-hidden{
+  position: fixed;
+  top: 1500px;
+  left: calc(100% - 320px);
+  height: 100px;
+  width: 300px;
+  background-color: rgba(20, 34, 34, 1);
+  border-radius: 2px;
+  z-index: 10000;
+  transition: all 0.3s;
+}
+.message-show-header{
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(26, 68, 68, 1);;
+  border-radius: 2px;
+  color:#fff;
+  padding: 2px 10px;
+  margin-bottom: 0;
+}
+.message-detail{
+  padding: 2px 10px;
+  display: inline-block;
+  width: 100%;
+}
+.view-message-button{
+  height: 25px;
+  line-height: 25px;
+  width: 66px;
+  background-color: #0d7b7b;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.down-icon-style{
+  width: 8px;
+  height: 5px;
+  float: right;
+  margin: 19px 8px 8px 8px;
+}
+.color-sponsor {
+  color: #FF2F2F
+}
+
+.color-participate {
+  color: #137e17;
+}
+
+.color-delete-bid {
+  color: #c41c18;
+}
+
+.color-bule {
+  color: #54aebb;
+}
+.cursor-p{
+  cursor: pointer;
+}

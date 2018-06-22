@@ -1,0 +1,22 @@
+.header-container {
+  height: 46px;
+  background-color: #1b3333;
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-start;
+  border-bottom: 1px solid #ff900d;
+  padding: 0 50px 0 20px;
+  app-top-menu{
+    margin-left: 150px;
+    flex: 1;
+  }
+  app-user-menu{
+    width: 20%;
+    color: #fff;
+  }
+}
+
+
+
+
+

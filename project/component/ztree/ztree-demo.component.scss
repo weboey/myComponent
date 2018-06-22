@@ -1,0 +1,123 @@
+.ztree-top{
+  height: 80px;
+  padding: 5px 30px;
+  line-height: 80px;
+  font-size: 14px;
+  .btn-group{
+    float: right;
+    button:not(:last-child){
+      margin-right: 15px;
+    }
+  }
+}
+.ztree-container{
+  display: flex;
+  width: 100%;
+  color:#f9ecd5;
+  .menu-title{
+    width: 132px;
+    height: 50px;
+    color:#f9ecd5;
+    line-height: 50px;
+    text-align: center;
+    background-color: #235153;
+  }
+  .ztree-box{
+    width: 25%;
+    margin-left: 30px;
+    .ztree{
+      border-top: 4px solid #235153;
+      height: 700px;
+      overflow: auto;
+      background-color: #171819;
+    }
+  }
+  .ztree-detail-box{
+    flex: 1;
+    margin: 0 30px;
+    .ztree-edit-panel{
+      padding: 20px;
+      height: 700px;
+      border-top: 4px solid #235153;
+      background-color: #171819;
+      overflow: auto;
+      font-size: 16px;
+      form{
+        width: 800px;
+        margin: 120px 150px;
+      }
+    }
+  }
+}
+
+.red{
+  color: #ff6700;
+}
+
+.ant-btn{
+  font-size: 16px !important;
+}
+.ant-btn-primary {
+  background-color: #46b990;
+  border-radius: 2px;
+  border: none;
+  height: 30px;
+}
+.ant-btn-primary:hover{
+  color: #fff;
+  background-color: #4ecda0;
+  border-color: rgba(81,171,160,1);
+}
+.ant-btn-primary:focus{
+  background-color: #46b990;
+}
+
+.ant-btn-default{
+  color: #fff;
+  height: 30px;
+  background-color: #1a4444;
+  border-radius: 2px;
+  border: none;
+}
+.ant-btn-default:hover{
+  color: #fff;
+  background-color: #266363;
+  border-color: #1a4444;
+}
+.ant-btn-default:focus{
+  background-color: #1a4444;
+}
+
+
+
+.form-item{
+  margin-bottom: 30px;
+}
+input{
+  outline: none;
+  position: relative;
+  display: inline-block;
+  padding: 4px 7px;
+  width: 80%;
+  height: 36px;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #3b4145;
+  background-image: none;
+  border: 1px solid #3b4145;
+  border-radius: 4px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+input:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(16,142,233,.2);
+  box-shadow: 0 0 0 2px rgba(16,142,233,.2);
+}
+input:focus, .ant-input:hover {
+  border-color: #c9deec;
+}
+
+

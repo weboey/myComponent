@@ -1,0 +1,47 @@
+
+<div>
+  <div class="ztree-top">
+    <span>系统设置>菜单配置</span>
+    <div class="btn-group">
+      <button nz-button [nzType]="'primary'" (click)="saveMenuConfig()">保存修改</button>
+      <button nz-button [nzType]="'primary'" (click)="addTreeRootNode()">创建一级菜单</button>
+      <button nz-button [nzType]="'default'">返回前页</button>
+    </div>
+  </div>
+
+  <div class="ztree-container">
+    <div class="ztree-box">
+      <h2 class="menu-title">菜单导航</h2>
+      <ul id="ztree" class="ztree"></ul>
+    </div>
+
+    <div class="ztree-detail-box">
+      <h2 class="menu-title">编辑</h2>
+      <div class="ztree-edit-panel">
+        <form #heroForm="ngForm">
+          <div class="form-group form-item">
+            <label for="name">菜单名称：</label>
+            <input type="text" class="form-control" #inputMenuNameEle
+                   #name="ngModel"
+                   name="name"
+                   id="name"
+                   (input)="changeMenu()"
+                   required
+                   [(ngModel)]="selectedItem.name">
+          </div>
+          <div class="form-group form-item" *ngIf="!selectedItem.isParent">
+            <label for="url">导航地址：</label>
+            <input type="text"
+                   (input)="changeMenu()"
+                   class="form-control"
+                   id="url"
+                   name="url" [(ngModel)]="selectedItem.url">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

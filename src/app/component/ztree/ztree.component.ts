@@ -1,13 +1,13 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import 'ztree';
-import * as MENUS from "../mock"
-const menu=MENUS.MENUS;
+import * as MENUS from '../mock';
+const menu = MENUS.MENUS;
 const zNodes =  MENUS.zNodes;
 declare var $: any;
 
 class MenuModel {
-  name:string;
-  url:string;
+  name: string;
+  url: string;
 }
 
 @Component({
@@ -19,7 +19,8 @@ class MenuModel {
 
 export class ZtreeComponent implements OnInit {
   zTree: any;
-  zNodes = zNodes;
+  // zNodes = zNodes;
+   zNodes = menu;
   newCount = 1;
   selectedItem: MenuModel = {
     name:'',
@@ -41,9 +42,12 @@ export class ZtreeComponent implements OnInit {
       showRenameBtn: false,
     },
     data: {
-      simpleData: {
-        enable: true
+      key: {
+        children: 'subMenu'
       }
+      // simpleData: {
+      //   enable: true
+      // }
     },
     callback: {
       onClick: this.onClick.bind(this)
@@ -100,9 +104,11 @@ export class ZtreeComponent implements OnInit {
     //this.selectedItem['name'] = 'weboey';
     this.zTree.updateNode(this.selectedItem);
   }
-  saveMenuConfig(){
+  saveMenuConfig() {
     //console.log(this.zTree.transformToArray(this.zTree.getNodes()));
-    this.zNodes = this.updateOriginDate(this.zNodes,this.zTree.transformToArray(this.zTree.getNodes()));
+    debugger;
+    const d = this.zTree.transformToArray(this.zTree.getNodes());
+    this.zNodes = this.updateOriginDate(this.zNodes, d);
     console.log(this.zNodes);
   }
   shallowClone(o) {
